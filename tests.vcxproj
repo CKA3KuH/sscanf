@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D48BA93F-26AF-4F82-81AA-E23A59854BEC}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>tests</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;SSCANF_DEBUG;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="sdk\amxplugin.cpp" />
+    <ClCompile Include="sdk\amx\getch.c" />
+    <ClCompile Include="src\delimiters.cpp" />
+    <ClCompile Include="src\environment.cpp" />
+    <ClCompile Include="src\errors.cpp" />
+    <ClCompile Include="src\memory.cpp" />
+    <ClCompile Include="src\options.cpp" />
+    <ClCompile Include="src\parser.cpp" />
+    <ClCompile Include="src\specifiers.cpp" />
+    <ClCompile Include="src\specifiers\group_specifiers.cpp" />
+    <ClCompile Include="src\specifiers\other_specifiers.cpp" />
+    <ClCompile Include="src\specifiers\simple_specifiers.cpp" />
+    <ClCompile Include="src\specifiers\string_specifier.cpp" />
+    <ClCompile Include="src\tests\test_delimiters.cpp" />
+    <ClCompile Include="src\tests\test_group_specifiers.cpp" />
+    <ClCompile Include="src\tests\test_other_specifiers.cpp" />
+    <ClCompile Include="src\tests\test_parser.cpp" />
+    <ClCompile Include="src\tests\test_simple_specifiers.cpp" />
+    <ClCompile Include="src\tests\test_specifiers.cpp" />
+    <ClCompile Include="src\tests\test_string_specifier.cpp" />
+    <ClCompile Include="src\tests\test_trivial_specifiers.cpp" />
+    <ClCompile Include="src\tests\test_utils.cpp" />
+    <ClCompile Include="src\utils.cpp" />
+    <ClCompile Include="test.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="sdk\amx\amx.h" />
+    <ClInclude Include="sdk\amx\getch.h" />
+    <ClInclude Include="sdk\amx\sclinux.h" />
+    <ClInclude Include="sdk\plugin.h" />
+    <ClInclude Include="sdk\plugincommon.h" />
+    <ClInclude Include="src\delimiters.h" />
+    <ClInclude Include="src\environment.h" />
+    <ClInclude Include="src\errors.h" />
+    <ClInclude Include="src\memory.h" />
+    <ClInclude Include="src\options.h" />
+    <ClInclude Include="src\parser.h" />
+    <ClInclude Include="src\specifiers.h" />
+    <ClInclude Include="src\specifiers\array_specifier.h" />
+    <ClInclude Include="src\specifiers\delim_specifier.h" />
+    <ClInclude Include="src\specifiers\enum_specifier.h" />
+    <ClInclude Include="src\specifiers\group_specifiers.h" />
+    <ClInclude Include="src\specifiers\numeric_specifier.h" />
+    <ClInclude Include="src\specifiers\other_specifiers.h" />
+    <ClInclude Include="src\specifiers\player_specifier.h" />
+    <ClInclude Include="src\specifiers\simple_specifiers.h" />
+    <ClInclude Include="src\specifiers\specnum_specifiers.h" />
+    <ClInclude Include="src\specifiers\string_specifier.h" />
+    <ClInclude Include="src\specifiers\trivial_specifiers.h" />
+    <ClInclude Include="src\utils.h" />
+    <ClInclude Include="test.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
